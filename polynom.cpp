@@ -81,7 +81,7 @@ double countPolynom(double x, PolynomMember* polynom, int polynom_len) {
 int main() {
 	ofstream out("out/points.txt");
 
-	string polynom = "0.5x^1";
+	string polynom = "0.5x^4-3x^1+1x^0";
 	int polynom_len = count(polynom, polynom_var);
 	PolynomMember* pPolynom_args = polynomParser(polynom, polynom_len);
 
@@ -90,6 +90,6 @@ int main() {
 
 	double step = (right - left) / count;
 	for (double point = left; point <= right; point += step)
-		out << countPolynom(point, pPolynom_args, polynom_len) << endl;
+		out << "x: " << point << " | y: " << countPolynom(point, pPolynom_args, polynom_len) << endl;
 	out.close(); delete[] pPolynom_args;
 }
