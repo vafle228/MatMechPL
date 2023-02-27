@@ -1,4 +1,1 @@
-﻿  3dVector.cpp
-  Vector.cpp
-  Создание кода...
-  3dVector.vcxproj -> C:\Users\F2P\Desktop\3dVector\x64\Debug\3dVector.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(390,5): error MSB8020: Не удается найти средства сборки для v143 (набор инструментов платформы = "v143"). Чтобы выполнить сборку с использованием средств сборки v143 установите средства сборки v143.  Кроме того, можно выполнить обновление до текущей версии средств Visual Studio, перейдя в меню "Проект" или щелкнув решение правой кнопкой мыши и выбрав "Обновить решение...".

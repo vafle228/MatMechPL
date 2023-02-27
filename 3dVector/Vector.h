@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 
-
 struct Vector {
 	private:
 		double x, y, z;
@@ -26,4 +25,6 @@ struct Vector {
 		static Vector Normalize(Vector v1);
 
 		static Vector NormalToSurface(Vector v1, Vector v2);
+
+		static Vector RotateVector(Vector b1, Vector b2, Vector v, double a);
 };
