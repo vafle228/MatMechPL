@@ -76,10 +76,10 @@ Vector Vector::NormalToSurface(Vector v1, Vector v2)
 
 Vector Vector::RotateVector(Vector b1, Vector b2, Vector v, double a)
 {
-	double first_coef = Length(v) / std::cos(a / PI * 180);
+	double first_coef = std::pow(Length(v), 2) / std::cos(a * PI / 180);
 	double second_coef = (b1.x * b2.z - b2.x * b1.z) / (b1.y * b2.z - b1.z * b2.y);
 
-	double y = first_coef * 1 / (v.x * second_coef + v.y);
+	double y = first_coef / (v.x * second_coef + v.y);
 
 	return Vector(y * second_coef, y, 0);
 }
