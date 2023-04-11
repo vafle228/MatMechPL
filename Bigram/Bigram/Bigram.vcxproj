@@ -128,12 +128,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sourse\BigramModel.cpp" />
     <ClCompile Include="sourse\Token.cpp" />
     <ClCompile Include="sourse\Tokenizer.cpp" />
+    <ClCompile Include="sourse\WordChance.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\BigramModel.h" />
     <ClInclude Include="headers\Token.h" />
     <ClInclude Include="headers\Tokinezer.h" />
+    <ClInclude Include="headers\WordChance.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="static\1.txt" />
+    <Text Include="static\2.txt" />
+    <Text Include="static\3.txt" />
+    <Text Include="static\4.txt" />
+    <Text Include="static\text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

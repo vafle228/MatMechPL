@@ -9,4 +9,6 @@ public:
 	const std::string second;
 
 	Token(std::string first, std::string second);
+	
+	bool operator<(const Token& obj) const;
 };

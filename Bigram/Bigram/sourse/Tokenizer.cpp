@@ -19,13 +19,13 @@ std::vector<Token> Tokenizer::GetTokens()
 	while (std::regex_search(text, sentence_m, sentence_exp))
 	{
 		sentence_str = sentence_m[0];
-		while (std::regex_search(sentence_str, word_m, word_exp)) 
+		while (std::regex_search(sentence_str, word_m, word_exp))
 		{
-			if (last_word == "") last_word = word_m[0];
+			if (last_word == "") last_word = NormalizeString(word_m[0]);
 			else
 			{
 				result.push_back(Token(last_word, word_m[0]));
-				last_word = word_m[0];
+				last_word = NormalizeString(word_m[0]);
 			}
 			sentence_str = word_m.suffix().str();
 		}
@@ -49,7 +49,8 @@ std::string Tokenizer::ReadAllFile()
 
 std::string Tokenizer::NormalizeString(std::string str)
 {
-	for (int i = 0; i < str.length(); i++) 
-		str.replace(i, 1, std::to_string(tolower(str[i])));
+	for (int i = 0; i < str.length(); i++)
+		if (-64 <= str[i] && str[i] <= -33)
+			str.replace(i, 1, 1, str[i] + 32);	
 	return str;
 }
