@@ -16,8 +16,8 @@ int main()
 
 	while (std::regex_search(s, m, r)) 
 	{
-		for (auto match : m) 
-			std::cout << match << std::endl;
+		
+		std::cout << m[0] << std::endl;
 		s = m.suffix().str();
 	}
 }
