@@ -15,9 +15,7 @@ public:
 
 private:
 	std::ifstream connect;
-	
-	std::regex word_exp = std::regex("[À-ÿ]+");
-	std::regex sentence_exp = std::regex("[À-ÿ][^\.!?]*[\.!?]");
+	std::regex word_exp, sentence_exp;
 
 	std::string ReadAllFile();
 	std::string NormalizeString(std::string str);

@@ -3,21 +3,15 @@
 #include <string>
 #include <regex>
 
+#include "headers/Tokinezer.h"
+
 
 int main()
 {
 	setlocale(0, "rus");
-	std::regex r("[а-яА-Я0-9]+");
-	std::smatch m;
+	Tokenizer tokenizer = Tokenizer("static/text.txt");
+	std::vector<Token> result = tokenizer.GetTokens();
 
-	std::string s = "Привет, 10 друзья! Сегодня я готовлю невероятно вкусную и сочную курицу в духовке. Это блюдо всегда будет на вашем столе и обязательно порадует всех ваших гостей. Куриный рулет в фольге - это отличный вариант для праздничного стола, а также для будничного ужина. У каждой хозяйки есть свой фирменный рецепт приготовления куриного рулета в фольге, но есть и общие правила.";
-
-	std::regex_search(s, m, r);
-
-	while (std::regex_search(s, m, r)) 
-	{
-		
-		std::cout << m[0] << std::endl;
-		s = m.suffix().str();
-	}
+	for (auto token : result)
+		std::cout << "1) " << token.first << " 2) " << token.second << std::endl;
 }
