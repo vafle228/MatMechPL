@@ -1,10 +1,13 @@
 #include "../headers/Tokinezer.h"
+#include <iostream>
 
+
+// ([À-ÿ\-]{2,})|([À-ÿ]+)
 
 Tokenizer::Tokenizer(std::string path)
 {
 	connect = std::ifstream(path);
-	word_exp = std::regex("[À-ÿ]+");
+	word_exp = std::regex("([À-ÿ\-]{3,})");
 	sentence_exp = std::regex("[À-ÿ][^\.!?]*[\.!?]");
 }
 
@@ -24,8 +27,8 @@ std::vector<Token> Tokenizer::GetTokens()
 			if (last_word == "") last_word = NormalizeString(word_m[0]);
 			else
 			{
-				result.push_back(Token(last_word, word_m[0]));
-				last_word = NormalizeString(word_m[0]);
+				std::string next_word = NormalizeString(word_m[0]);
+				result.push_back(Token(last_word, next_word)); last_word = next_word;
 			}
 			sentence_str = word_m.suffix().str();
 		}

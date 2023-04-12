@@ -22,6 +22,15 @@
     <ClCompile Include="sourse\Tokenizer.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="sourse\BigramModel.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\WordChance.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\ModelSerializer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Tokinezer.h">
@@ -30,5 +39,37 @@
     <ClInclude Include="headers\Token.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="headers\BigramModel.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\WordChance.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\ModelSerializer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="static\1.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="static\2.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="static\3.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="static\4.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="static\5.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="static\6.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="static\text.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

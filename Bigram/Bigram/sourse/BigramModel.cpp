@@ -1,17 +1,28 @@
+#include <iostream>
+
 #include "../headers/Token.h"
 #include "../headers/Tokinezer.h"
 #include "../headers/BigramModel.h"
 
 
-void BigramModel::Train(std::string file_path)
-{
-	Tokenizer tokenizer = Tokenizer(file_path);
-	std::vector<Token> tokens = tokenizer.GetTokens();
+void BigramModel::DumpModel() { serializer.DumpModel(); }
 
+void BigramModel::LoadModel() { serializer.LoadModel(); }
+
+void BigramModel::Train(std::vector<std::string> file_paths)
+{
 	std::map<Token, float> bigram_freq;
 	std::map<std::string, int> word_freq;
 
-	CountFreqs(tokens, bigram_freq, word_freq);
+	for (std::string path : file_paths) 
+	{
+		Tokenizer tokenizer = Tokenizer(path);
+		CountFreqs(tokenizer.GetTokens(), bigram_freq, word_freq);
+
+		std::cout << "Book " << path << " read!" << std::endl;
+	}
+
+	std::cout << "Starting to form bigram" << std::endl;
 
 	for (auto it = bigram_freq.begin(); it != bigram_freq.end(); it++) 
 	{

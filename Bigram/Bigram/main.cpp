@@ -1,7 +1,4 @@
 ﻿#include <iostream>
-#include <fstream>
-#include <string>
-#include <regex>
 
 #include "headers/Tokinezer.h"
 #include "headers/BigramModel.h"
@@ -9,28 +6,25 @@
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
 	std::srand(std::time(nullptr));
 
 	BigramModel bigram_model = BigramModel();
 	
-	#pragma region Train model on Tolstoy
+	#pragma region Train model on russian classic
 
-	bigram_model.Train("static/text.txt");
+	std::vector<std::string> train_paths
+	{
+		"static/1.txt", "static/2.txt",
+		"static/3.txt", "static/4.txt"
+	};
 
-	bigram_model.Train("static/1.txt");
-	std::cout << "First book complete" << std::endl;
-	
-	bigram_model.Train("static/2.txt");
-	std::cout << "Second book complete" << std::endl;
-
-	bigram_model.Train("static/3.txt");
-	std::cout << "Third book complete" << std::endl;
-
-	bigram_model.Train("static/4.txt");
-	std::cout << "Fourth book complete" << std::endl;
+	bigram_model.Train(train_paths);
 
 	#pragma endregion
 
-	std::cout << bigram_model.GenerateText("развитие", 100) << std::endl;
+	bigram_model.DumpModel();
+
+	setlocale(LC_ALL, "rus");
+	
+	std::cout << bigram_model.GenerateText("который", 100) << std::endl;
 }
