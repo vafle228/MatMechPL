@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "Vector.h"
 
+
 int main()
 {
     Vector v1 = Vector(-2, 0, 2);
