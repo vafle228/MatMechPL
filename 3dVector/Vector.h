@@ -2,10 +2,8 @@
 #include <string>
 
 
-struct Vector {
-private:
-	double x, y, z;
-	
+class Vector {
+
 public: 
 	Vector(double x, double y, double z);
 		
@@ -27,5 +25,7 @@ public:
 
 	static Vector NormalToSurface(Vector v1, Vector v2);
 
-	static Vector RotateVector(Vector b1, Vector b2, Vector v, double a);
+	static Vector RotateVector(Vector b1, Vector b2, double a);
+
+private: double x, y, z;
 };

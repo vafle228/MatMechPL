@@ -3,12 +3,9 @@
 
 const double PI = 3.14159265359;
 
-Vector::Vector(double x, double y, double z)
-{
-	this->x = x; 
-	this->y = y;
-	this->z = z;
-}
+Vector::Vector(double x, double y, double z) 
+	: x(x), y(y), z(z)
+{ }
 
 Vector Vector::Sum(Vector v1, Vector v2)
 {
@@ -71,15 +68,16 @@ Vector Vector::Normalize(Vector v1)
 
 Vector Vector::NormalToSurface(Vector v1, Vector v2)
 {
-	return VectorMult(v1, v2);
+	return Normalize(VectorMult(v1, v2));
 }
 
-Vector Vector::RotateVector(Vector b1, Vector b2, Vector v, double a)
+Vector Vector::RotateVector(Vector b1, Vector b2, double a)
 {
-	double first_coef = std::pow(Length(v), 2) / std::cos(a * PI / 180);
-	double second_coef = (b1.x * b2.z - b2.x * b1.z) / (b1.y * b2.z - b1.z * b2.y);
+	Vector zaxis = NormalToSurface(b1, b2);
+	Vector xaxis = VectorMult(zaxis, b1);
 
-	double y = first_coef / (v.x * second_coef + v.y);
+	double sin_rot = std::sin(a * PI / 180);
+	double cos_rot = std::cos(a * PI / 180);
 
-	return Vector(y * second_coef, y, 0);
+	return Sum(NumMult(b1, cos_rot), NumMult(xaxis, sin_rot));
 }
