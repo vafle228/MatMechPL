@@ -1,5 +1,5 @@
 #pragma once
-#include "GamePlayer.h"
+#include "GameCore/GamePlayer.h"
 
 
 class Player : public GamePlayer 

@@ -1,4 +1,4 @@
-#include "../headers/EasyAI.h"
+#include "../../headers/GameAi/EasyAI.h"
 
 
 int GenerateRandomNumber(int min_val, int max_val)

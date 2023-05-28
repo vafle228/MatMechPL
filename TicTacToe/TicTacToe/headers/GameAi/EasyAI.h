@@ -1,5 +1,5 @@
 #pragma once
-#include "GamePlayer.h"
+#include "../GameCore/GamePlayer.h"
 
 
 class EasyAI : public GamePlayer 

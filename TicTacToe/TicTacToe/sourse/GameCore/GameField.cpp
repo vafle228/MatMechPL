@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "../headers/GameField.h"
+#include "../../headers/GameCore/GameField.h"
 
 #define CheckableTiles std::vector<std::vector<std::pair<int, int>>>
 
@@ -70,12 +70,8 @@ GameState GameField::CheckState()
 	#pragma endregion
 
 	for (int i = 0; i < game_field.size(); i++) 
-	{
 		for (int j = 0; j < game_field[i].size(); j++)
-		{
 			if (game_field[i][j] == ' ') return GameState::Game;
-		}
-	}
 	return GameState::Tie;
 }
 

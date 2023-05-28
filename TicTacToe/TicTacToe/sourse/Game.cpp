@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../headers/Game.h"
-#include "../headers/EasyAI.h"
 #include "../headers/Player.h"
+#include "../headers/GameAi/EasyAI.h"
 
 
 Game::Game(char player_sign, AIModes mode)

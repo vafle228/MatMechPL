@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 
 #include "headers/Game.h"
-#include "headers/AIModes.h"
-#include "headers/GameState.h"
+#include "headers/GameAi/AIModes.h"
+#include "headers/GameCore/GameState.h"
 
 
 int main()

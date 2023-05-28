@@ -1,7 +1,7 @@
 #pragma once
-#include "AIModes.h"
-#include "GameField.h"
-#include "GamePlayer.h"
+#include "GameAi/AIModes.h"
+#include "GameCore/GameField.h"
+#include "GameCore/GamePlayer.h"
 
 
 class Game 
