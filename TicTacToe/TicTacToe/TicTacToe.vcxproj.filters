@@ -31,6 +31,12 @@
     <Filter Include="Исходные файлы\GameCore">
       <UniqueIdentifier>{10284519-a356-4d4c-8ec3-d38c7b975c79}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Utils">
+      <UniqueIdentifier>{1e0179dc-c78d-4203-90a7-7b80df692674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Utils">
+      <UniqueIdentifier>{fe3c897b-dfda-4bb4-8f17-89f4a5236153}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="sourse\GameSolver\GraphRel.cpp">
       <Filter>Исходные файлы\GameSolver</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Utils\Utils.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="headers\GameSolver\GraphRel.h">
       <Filter>Файлы заголовков\GameSolver</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Utils.h">
+      <Filter>Файлы заголовков\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -134,6 +134,7 @@
     <ClCompile Include="sourse\GameSolver\GraphRel.cpp" />
     <ClCompile Include="sourse\GameSolver\SolveGraph.cpp" />
     <ClCompile Include="sourse\Player.cpp" />
+    <ClCompile Include="sourse\Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Game.h" />
@@ -145,6 +146,7 @@
     <ClInclude Include="headers\GameSolver\GraphRel.h" />
     <ClInclude Include="headers\GameSolver\SolveGraph.h" />
     <ClInclude Include="headers\Player.h" />
+    <ClInclude Include="headers\Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
