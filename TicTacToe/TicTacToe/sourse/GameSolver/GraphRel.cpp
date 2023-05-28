@@ -6,7 +6,7 @@ GameOutcome::GameOutcome(int tie, int x_win, int x_lose)
 	: tie(tie), x_win(x_win), x_lose(x_lose)
 { }
 
-GameOutcome GameOutcome::operator+(GameOutcome& obj)
+GameOutcome GameOutcome::operator+(GameOutcome obj)
 {
 	return GameOutcome(tie + obj.tie, x_win + obj.x_win, x_lose + obj.x_lose);
 }

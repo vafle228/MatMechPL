@@ -10,7 +10,7 @@ struct GameOutcome
 
 	GameOutcome(int tie, int x_win, int x_lose);
 
-	GameOutcome operator+(GameOutcome& obj);
+	GameOutcome operator+(GameOutcome obj);
 };
 
 struct GraphRel 
