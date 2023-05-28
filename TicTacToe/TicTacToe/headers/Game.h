@@ -3,11 +3,13 @@
 #include "GameCore/GameField.h"
 #include "GameCore/GamePlayer.h"
 
+#include "GameSolver/SolveGraph.h"
+
 
 class Game 
 {
 public:
-	Game(char player_sign, AIModes mode);
+	Game(char player_sign, AIModes mode, SolveGraph* graph);
 	
 	void NextTurn();
 	GameState State();

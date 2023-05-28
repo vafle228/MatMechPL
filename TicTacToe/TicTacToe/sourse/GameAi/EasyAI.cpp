@@ -10,7 +10,14 @@ EasyAI::EasyAI(char sign)
 	: GamePlayer(sign) 
 { }
 
-std::pair<int, int> EasyAI::MakeMove() 
+void EasyAI::MakeMove(GameField* field)
 {
-	return { GenerateRandomNumber(1, 4), GenerateRandomNumber(1, 4) };
+	while ("Try to random free cell") 
+	{
+		int row = GenerateRandomNumber(1, 4);
+		int col = GenerateRandomNumber(1, 4);
+		
+		try { field->DoMove(row, col, sign); return; }
+		catch (const std::exception& except) { continue; }
+	}
 }

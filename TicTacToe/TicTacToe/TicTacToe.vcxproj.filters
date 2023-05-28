@@ -63,6 +63,9 @@
     <ClCompile Include="sourse\Utils\Utils.cpp">
       <Filter>Исходные файлы\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="sourse\GameAi\NormalAI.cpp">
+      <Filter>Исходные файлы\GameAi</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Player.h">
@@ -94,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="headers\Utils.h">
       <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\GameAi\NormalAI.h">
+      <Filter>Файлы заголовков\GameAi</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

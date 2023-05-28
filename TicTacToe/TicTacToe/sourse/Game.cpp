@@ -1,22 +1,24 @@
 #include <iostream>
 #include "../headers/Game.h"
 #include "../headers/Player.h"
+
 #include "../headers/GameAi/EasyAI.h"
+#include "../headers/GameAi/NormalAI.h"
 
 
-Game::Game(char player_sign, AIModes mode)
+Game::Game(char player_sign, AIModes mode, SolveGraph* graph)
 {
     player = new Player(player_sign);
 
     if (player_sign == 'X') 
     {
-        computer = new EasyAI('O');
+        computer = new NormalAI('O', graph);
         active = player;
     }
     
     else
     {
-        computer = new EasyAI('X');
+        computer = new NormalAI('X', graph);
         active = computer;
     }
 }
@@ -25,17 +27,8 @@ void Game::NextTurn()
 {
     while ("Input loop")
     {
-        try
-        {
-            auto move = active->MakeMove();
-            field.DoMove(move.first, move.second, active->sign);
-            break;
-        }
-        catch (const std::exception& ex)
-        {
-            if (active == computer) continue;
-            std::cout << ex.what() << std::endl;
-        }
+        try { active->MakeMove(&field); break; }
+        catch (const std::exception& ex) { std::cout << ex.what() << std::endl; }
     }
     active = active == computer ? player : computer;
 }

@@ -1,14 +1,16 @@
 #pragma once
 #include <vector>
 
+#include "GameField.h"
+
 
 class GamePlayer 
 {
 public:
-	const char sign;
-	
 	GamePlayer(char sign);
-	virtual std::pair<int, int> MakeMove() = 0;
+	virtual void MakeMove(GameField* field) = 0;
+
+protected: const char sign;
 };
 
 
