@@ -131,6 +131,7 @@
     <ClCompile Include="sourse\Game.cpp" />
     <ClCompile Include="sourse\GameAi\EasyAI.cpp" />
     <ClCompile Include="sourse\GameCore\GameField.cpp" />
+    <ClCompile Include="sourse\GameSolver\GraphRel.cpp" />
     <ClCompile Include="sourse\GameSolver\SolveGraph.cpp" />
     <ClCompile Include="sourse\Player.cpp" />
   </ItemGroup>

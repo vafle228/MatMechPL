@@ -51,6 +51,9 @@
     <ClCompile Include="sourse\GameSolver\SolveGraph.cpp">
       <Filter>Исходные файлы\GameSolver</Filter>
     </ClCompile>
+    <ClCompile Include="sourse\GameSolver\GraphRel.cpp">
+      <Filter>Исходные файлы\GameSolver</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Player.h">
