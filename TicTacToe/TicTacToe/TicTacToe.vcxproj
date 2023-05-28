@@ -131,6 +131,7 @@
     <ClCompile Include="sourse\Game.cpp" />
     <ClCompile Include="sourse\GameAi\EasyAI.cpp" />
     <ClCompile Include="sourse\GameCore\GameField.cpp" />
+    <ClCompile Include="sourse\GameSolver\SolveGraph.cpp" />
     <ClCompile Include="sourse\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +141,8 @@
     <ClInclude Include="headers\GameCore\GameField.h" />
     <ClInclude Include="headers\GameCore\GamePlayer.h" />
     <ClInclude Include="headers\GameCore\GameState.h" />
+    <ClInclude Include="headers\GameSolver\GraphRel.h" />
+    <ClInclude Include="headers\GameSolver\SolveGraph.h" />
     <ClInclude Include="headers\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

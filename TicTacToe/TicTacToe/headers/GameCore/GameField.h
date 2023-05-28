@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 
 #include "GameState.h"
 
@@ -16,6 +17,9 @@ public:
 	void Print();
 	GameState CheckState();
 	void DoMove(int row, int col, char sign);
+
+	std::string ToString();
+	void LoadField(std::string field);
 
 private: Field game_field;
 };

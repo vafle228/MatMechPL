@@ -48,6 +48,9 @@
     <ClCompile Include="sourse\GameCore\GameField.cpp">
       <Filter>Исходные файлы\GameCore</Filter>
     </ClCompile>
+    <ClCompile Include="sourse\GameSolver\SolveGraph.cpp">
+      <Filter>Исходные файлы\GameSolver</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Player.h">
@@ -70,6 +73,12 @@
     </ClInclude>
     <ClInclude Include="headers\GameCore\GameState.h">
       <Filter>Файлы заголовков\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\GameSolver\SolveGraph.h">
+      <Filter>Файлы заголовков\GameSolver</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\GameSolver\GraphRel.h">
+      <Filter>Файлы заголовков\GameSolver</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

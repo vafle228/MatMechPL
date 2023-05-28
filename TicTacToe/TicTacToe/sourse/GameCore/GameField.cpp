@@ -85,3 +85,33 @@ void GameField::DoMove(int row, int col, char sign)
 
 	game_field[row - 1][col - 1] = sign;
 }
+
+std::string GameField::ToString()
+{
+	std::string result = "";
+	
+	for (int row = 0; row < game_field.size(); row++) 
+	{
+		for (int col = 0; col < game_field.size(); col++)
+		{
+			char add = game_field[row][col];
+			result += add != ' ' ? add : '_';
+		}
+	}
+	return result;
+}
+
+void GameField::LoadField(std::string field)
+{
+	if (field.length() != SIZE * SIZE)
+		throw std::exception("Wrong load size");
+
+	for (int row = 0; row < game_field.size(); row++) 
+	{
+		for (int col = 0; col < game_field.size(); col++)
+		{
+			char add = field[row * SIZE + col];
+			game_field[row][col] = add == '_' ? ' ' : add;
+		}
+	}
+}
