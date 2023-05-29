@@ -4,6 +4,7 @@
 
 #include "../headers/GameAi/EasyAI.h"
 #include "../headers/GameAi/NormalAI.h"
+#include "../headers/GameAi/HardAI.h"
 
 
 Game::Game(char player_sign, AIModes mode, SolveGraph* graph)
@@ -12,13 +13,13 @@ Game::Game(char player_sign, AIModes mode, SolveGraph* graph)
 
     if (player_sign == 'X') 
     {
-        computer = new NormalAI('O', graph);
+        computer = new HardAI('O', graph);
         active = player;
     }
     
     else
     {
-        computer = new NormalAI('X', graph);
+        computer = new HardAI('X', graph);
         active = computer;
     }
 }

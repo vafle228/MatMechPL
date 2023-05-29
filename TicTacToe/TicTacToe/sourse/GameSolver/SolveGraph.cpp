@@ -86,9 +86,13 @@ GameOutcome GenerateGraph(GameField* field, char sign, GameGraph* graph)
 			catch (const std::exception&) { continue; }
 
 			auto outcome = GenerateGraph(field, sign == 'X' ? 'O' : 'X', graph);
-
+			
 			GraphRel relation = GraphRel(field->ToString(), outcome);
-			graph->at(current_field).push_back(relation);
+			auto find_res{ std::find(graph->at(current_field).begin(), graph->at(current_field).end(), relation) };
+
+			if (find_res == graph->at(current_field).end())
+				graph->at(current_field).push_back(relation);
+			else find_res->operator+(relation);
 
 			field->LoadField(current_field); outcomes = outcomes + outcome;
 		}
@@ -96,16 +100,34 @@ GameOutcome GenerateGraph(GameField* field, char sign, GameGraph* graph)
 	return outcomes;
 }
 
+GameOutcome SumOutcomes(Outcomes outcomes) 
+{
+	GameOutcome out(0, 0, 0);
+	for (auto outcome : outcomes)
+		out = out + outcome.outcome;
+	return out;
+}
+
 void SolveGraph::GenerateGameGraph()
 {
 	GameField* field = new GameField();
+	game_graph["_________"] = Outcomes();
+
+	std::vector<std::string> field_vars
+	{
+		{ "____X____" },
+		{ "X________" },
+		{ "_X_______" },
+	};
 	
-	field->LoadField("X________");
-	GenerateGraph(field, 'O', &game_graph);
+	for (auto variant : field_vars) 
+	{
+		field->LoadField(variant);
+		GenerateGraph(field, 'O', &game_graph);
+		
+		auto var_outcomes = game_graph[variant];
+		GameOutcome summed = SumOutcomes(var_outcomes);
 
-	field->LoadField("_X_______");
-	GenerateGraph(field, 'O', &game_graph);
-
-	field->LoadField("____X____");
-	GenerateGraph(field, 'O', &game_graph);
+		game_graph["_________"].push_back({ variant, summed });
+	}
 }

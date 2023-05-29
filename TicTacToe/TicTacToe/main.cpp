@@ -16,7 +16,7 @@ int main()
     std::cout << "Ready!" << std::endl;
 
     GameState state = GameState::Game;
-    Game game_instance = Game('X', AIModes::Easy, &graph);
+    Game game_instance = Game('O', AIModes::Easy, &graph);
     
     while (state == GameState::Game) 
     {

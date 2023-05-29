@@ -66,6 +66,9 @@
     <ClCompile Include="sourse\GameAi\NormalAI.cpp">
       <Filter>Исходные файлы\GameAi</Filter>
     </ClCompile>
+    <ClCompile Include="sourse\GameAi\HardAI.cpp">
+      <Filter>Исходные файлы\GameAi</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Player.h">
@@ -99,6 +102,9 @@
       <Filter>Файлы заголовков\Utils</Filter>
     </ClInclude>
     <ClInclude Include="headers\GameAi\NormalAI.h">
+      <Filter>Файлы заголовков\GameAi</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\GameAi\HardAI.h">
       <Filter>Файлы заголовков\GameAi</Filter>
     </ClInclude>
   </ItemGroup>
