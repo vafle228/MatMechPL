@@ -12,6 +12,6 @@ float HardAI::CountMoveValue(GameOutcome outcome)
 	float self_lose = (sign == 'O' ? outcome.x_win : outcome.x_lose);
 
 	if (self_win / (self_win + tie + self_lose) < 0.9) 
-		return 4 * self_win + 2 * tie + self_lose;
+		return 4 * self_win + 3 * tie - self_lose;
 	return INT_MAX;
 }
