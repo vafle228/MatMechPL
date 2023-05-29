@@ -7,21 +7,23 @@
 #include "../headers/GameAi/HardAI.h"
 
 
+GamePlayer* InitAI(char ai_sign, AIModes mode, SolveGraph* graph) 
+{
+    if (mode == AIModes::Easy) 
+        return new EasyAI(ai_sign);
+
+    if (mode == AIModes::Hard) 
+        return new HardAI(ai_sign, graph);
+
+    return new NormalAI(ai_sign, graph);
+}
+
 Game::Game(char player_sign, AIModes mode, SolveGraph* graph)
 {
     player = new Player(player_sign);
+    computer = InitAI(player_sign == 'X' ? 'O' : 'X', mode, graph);
 
-    if (player_sign == 'X') 
-    {
-        computer = new HardAI('O', graph);
-        active = player;
-    }
-    
-    else
-    {
-        computer = new HardAI('X', graph);
-        active = computer;
-    }
+    active = player_sign == 'X' ? player : computer;
 }
 
 void Game::NextTurn()
