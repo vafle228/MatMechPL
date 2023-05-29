@@ -71,6 +71,11 @@ Vector Vector::NormalToSurface(Vector v1, Vector v2)
 	return Normalize(VectorMult(v1, v2));
 }
 
+double Vector::Angel(Vector v1, Vector v2)
+{
+	return std::acos(SclalarMult(v1, v2) / Length(v1) * Length(v2)) * 180 / PI;
+}
+
 Vector Vector::RotateVector(Vector b1, Vector b2, double a)
 {
 	Vector zaxis = NormalToSurface(b1, b2);

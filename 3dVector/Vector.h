@@ -4,7 +4,9 @@
 
 class Vector {
 
-public: 
+public:
+	double x, y, z;
+
 	Vector(double x, double y, double z);
 		
 	static Vector Sum(Vector v1, Vector v2);
@@ -25,7 +27,6 @@ public:
 
 	static Vector NormalToSurface(Vector v1, Vector v2);
 
+	static double Angel(Vector v1, Vector v2);
 	static Vector RotateVector(Vector b1, Vector b2, double a);
-
-private: double x, y, z;
 };
