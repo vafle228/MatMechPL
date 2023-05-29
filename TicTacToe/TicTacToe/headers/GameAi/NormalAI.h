@@ -1,17 +1,12 @@
 #pragma once
-#include "../GameCore/GamePlayer.h"
-#include "../GameSolver/SolveGraph.h"
+#include "SolveGraphAI.h"
 
 
-class NormalAI : public GamePlayer
+class NormalAI : public SolveGraphAI
 {
 public:
 	NormalAI(char sign, SolveGraph* graph);
-	
-	void MakeMove(GameField* field) override;
 
-private:
-	SolveGraph* solve_graph;
-
-	float CountMoveValue(GameOutcome outcome);
+protected:
+	float CountMoveValue(GameOutcome outcome) override;
 };

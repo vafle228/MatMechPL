@@ -2,23 +2,8 @@
 
 
 HardAI::HardAI(char sign, SolveGraph* graph)
-	: GamePlayer(sign), solve_graph(graph)
+	: SolveGraphAI(sign, graph)
 { }
-
-void HardAI::MakeMove(GameField* field)
-{
-	auto game_states = solve_graph->GetOutcomes(field->ToString());
-
-	GraphRel max_rel = game_states[0];
-	for (auto state_rel : game_states)
-	{
-		if (CountMoveValue(max_rel.outcome) < CountMoveValue(state_rel.outcome))
-		{
-			max_rel = state_rel;
-		}
-	}
-	field->LoadField(max_rel.rel);
-}
 
 float HardAI::CountMoveValue(GameOutcome outcome)
 {

@@ -132,6 +132,7 @@
     <ClCompile Include="sourse\GameAi\EasyAI.cpp" />
     <ClCompile Include="sourse\GameAi\HardAI.cpp" />
     <ClCompile Include="sourse\GameAi\NormalAI.cpp" />
+    <ClCompile Include="sourse\GameAi\SolveGraphAI.cpp" />
     <ClCompile Include="sourse\GameCore\GameField.cpp" />
     <ClCompile Include="sourse\GameSolver\GraphRel.cpp" />
     <ClCompile Include="sourse\GameSolver\SolveGraph.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="headers\GameAi\EasyAI.h" />
     <ClInclude Include="headers\GameAi\HardAI.h" />
     <ClInclude Include="headers\GameAi\NormalAI.h" />
+    <ClInclude Include="headers\GameAi\SolveGraphAI.h" />
     <ClInclude Include="headers\GameCore\GameField.h" />
     <ClInclude Include="headers\GameCore\GamePlayer.h" />
     <ClInclude Include="headers\GameCore\GameState.h" />
