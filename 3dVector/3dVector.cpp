@@ -18,14 +18,22 @@ Vector GetSurfaceNormal(Vector position)
 {
 	Vector surface_normal = Vector(0, 0, 0);
 
-	if (position.x == 0 || position.x == 1) 
+	if (position.x < pow(10, -8))
+		surface_normal = Vector::Sum(surface_normal, { 1, 0, 0 });
+	else if (1 - position.x < pow(10, -8))
 		surface_normal = Vector::Sum(surface_normal, { -1, 0, 0 });
-	if (position.y == 0 || position.y == 1) 
+	
+	if (position.y < pow(10, -8))
 		surface_normal = Vector::Sum(surface_normal, { 0, 1, 0 });
-	if (position.z == 0 || position.z == 1) 
+	else if (1 - position.y < pow(10, -8))
+		surface_normal = Vector::Sum(surface_normal, { 0, -1, 0 });
+	
+	if (position.z < pow(10, -8))
+		surface_normal = Vector::Sum(surface_normal, { 0, 0, 1 });
+	else if (1 - position.z < pow(10, -8))
 		surface_normal = Vector::Sum(surface_normal, { 0, 0, -1 });
 
-	return surface_normal;
+	return Vector::Normalize(surface_normal);
 }
 
 int main()
