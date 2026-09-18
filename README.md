@@ -1,2 +1,1 @@
-# MatMechPL
- Задачи по ЯТП для матмеха
+# BreadTeam

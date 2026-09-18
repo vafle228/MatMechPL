@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\Field">
+      <UniqueIdentifier>{26212ca9-1d18-43b7-971d-b61ba912fcec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Field">
+      <UniqueIdentifier>{405c9342-6ba0-4ff8-883f-a4671cb5adb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Model">
+      <UniqueIdentifier>{9115df20-6f70-41a2-8a09-213422183700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Model">
+      <UniqueIdentifier>{7876f574-f551-48ce-9a76-57822d08ef0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Utils">
+      <UniqueIdentifier>{3f39a9c1-fea0-4801-8fa8-0824552733b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Utils">
+      <UniqueIdentifier>{a9a101ec-fe25-476f-9835-fc6524eb97c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Database">
+      <UniqueIdentifier>{770339ad-d597-4c71-b644-ff9eff1ead32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Database">
+      <UniqueIdentifier>{f7b3ce8c-0c27-44dd-8e40-4f1a7710e21c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="sourse\Field\IntField.cpp">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Field\BoolField.cpp">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Field\StringField.cpp">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Model\ModelConnect.cpp">
+      <Filter>Исходные файлы\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Model\ModelManager.cpp">
+      <Filter>Исходные файлы\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Model\ModelSet.cpp">
+      <Filter>Исходные файлы\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Model\IModel.cpp">
+      <Filter>Исходные файлы\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Utils\Utils.cpp">
+      <Filter>Исходные файлы\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Database\SystemModel.cpp">
+      <Filter>Исходные файлы\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Database\Database.cpp">
+      <Filter>Исходные файлы\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="sourse\Database\CommandParser.cpp">
+      <Filter>Исходные файлы\Database</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\Field\IField.h">
+      <Filter>Файлы заголовков\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Field\IntField.h">
+      <Filter>Файлы заголовков\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Field\BoolField.h">
+      <Filter>Файлы заголовков\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Field\StringField.h">
+      <Filter>Файлы заголовков\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Model\IModel.h">
+      <Filter>Файлы заголовков\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Field.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Model\ModelConnect.h">
+      <Filter>Файлы заголовков\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Model\ModelManager.h">
+      <Filter>Файлы заголовков\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Model\ModelSet.h">
+      <Filter>Файлы заголовков\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Model.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Utils\Utils.h">
+      <Filter>Файлы заголовков\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Utils.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Database\SystemModel.h">
+      <Filter>Файлы заголовков\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Database\Database.h">
+      <Filter>Файлы заголовков\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Database.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Database\CommandParser.h">
+      <Filter>Файлы заголовков\Database</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
